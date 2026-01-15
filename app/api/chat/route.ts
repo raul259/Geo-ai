@@ -111,7 +111,7 @@ export async function POST(req: Request) {
     if (part.type === 'tool-result') {
       console.log('[API] Tool result full part:', JSON.stringify(part, null, 2));
       // El resultado está en part.output (según AI SDK v6)
-      const toolResult = (part as any).output || part.result;
+      const toolResult = (part as any).output;
       console.log('[API] Tool result extracted:', part.toolName, toolResult);
       
       // Capturar el input para obtener coordenadas

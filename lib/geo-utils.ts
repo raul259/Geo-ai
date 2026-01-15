@@ -75,7 +75,7 @@ export function getWindSpeedDescription(speed: number): string {
 }
 
 // Función para obtener datos meteorológicos actuales
-export async function getWeatherData(lat: number, lon: number): Promise<WeatherData | WeatherError> {
+export async function getWeatherData(lat: number, lon: number): Promise<any> {
   try {
     const url = `https://api.open-meteo.com/v1/forecast?latitude=${lat}&longitude=${lon}&current=temperature_2m,relative_humidity_2m,precipitation,weather_code,cloud_cover,wind_speed_10m,wind_direction_10m&timezone=auto`;
     
